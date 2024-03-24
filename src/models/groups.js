@@ -1,0 +1,33 @@
+import mongoose from 'mongoose'
+import MongooseDelete from 'mongoose-delete'
+
+const { model, Schema } = mongoose
+
+const schema = new Schema(
+  {
+    groupName: {
+      type: String,
+      required: true
+    },
+    groupCode: {
+      type: String,
+      required: true
+    },
+    position: {
+      type: Number,
+      required: true,
+      default: 0
+    },
+    active: { type: Boolean, default: true },
+    company: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Companies'
+    }
+  },
+  {
+    timestamps: true
+  }
+)
+
+schema.plugin(MongooseDelete, { deletedAt: true, overrideMethods: true })
+export const Groups = model('Groups', schema)

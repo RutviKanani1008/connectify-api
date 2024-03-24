@@ -1,0 +1,20 @@
+export const defaultStages = [
+  { code: 'downloaded-e-book', title: 'Downloaded E-Book', order: 0 },
+  { code: 'requested-consultation', title: 'Requested Consultation', order: 1 },
+  { code: 'left-message-for-contact', title: 'Left Message For Contact', order: 2 },
+  { code: 'spoke-with-contact', title: 'Spoke With Contact', order: 3 },
+  { code: 'invited-to-lodge', title: 'Invited To Lodge', order: 4 },
+  { code: 'visited-lodge', title: 'Visited Lodge', order: 5 },
+  { code: 'requested-petition', title: 'Requested Petition', order: 6 },
+  { code: 'petition-submitted', title: 'Petition Submitted', order: 7 },
+  { code: 'investigation-committee-assigned', title: 'Investigation Committee Assigned', order: 8 },
+  { code: 'investigation-completed', title: 'Investigation Completed', order: 9 },
+  { code: 'ballot-completed', title: 'Ballot Completed', order: 10 },
+  { code: 'ea-initiation-complete', title: 'EA Initiation Complete', order: 11 },
+  { code: 'ea-proficiency-complete', title: 'EA Proficiency Complete', order: 12 },
+  { code: 'fc-passing-complete', title: 'FC Passing Complete', order: 13 },
+  { code: 'fc-proficiency-complete', title: 'FC Proficiency Complete', order: 14 },
+  { code: 'mm-raising-complete', title: 'MM Raising Complete', order: 15 },
+  { code: 'mm-proficiency-complete', title: 'MM Proficiency Complete', order: 16 },
+  { code: 'contact-archived', title: 'Contact Archived', order: 17 }
+]

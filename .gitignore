@@ -1,0 +1,9 @@
+node_modules
+dist
+public/uploads/lodge
+public/uploads/sendRequest
+public/uploads/userProfile
+public/uploads/forms
+public/uploads/documents
+public/files
+ecosystem.config.cjs

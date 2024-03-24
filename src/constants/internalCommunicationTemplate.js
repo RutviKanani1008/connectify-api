@@ -1,0 +1,22 @@
+export const INTERNAL_COMMUNICATION_TEMPLATE = {
+  signUp: '6362924a6d1f693a2c5aed2b',
+  resetPassword: '6369bbf855334a0407138ee4',
+  eventNotification: '6369c1ced5dd54ca2286cb28',
+  userLoginSetPassword: '6369c77ceefa9c6e82162e3b',
+  reportProblem: '636b1bde806c0e8f7b927475',
+  autoResponderReportProblem: '636b158ae682a265e028d912',
+  reportProblemStatusUpdate: '64cbb89adeae7aa5dce6216b',
+  reportProblemCommentAdded: '64cbb944deae7aa5dce6216c',
+  featureRequest: '636b18f13a79bd5456b48b45',
+  autoResponderFeatureRequest: '636b122f76687fa6da342d32',
+  featureRequestStatusUpdate: '64cbbdc8deae7aa5dce6216d',
+  featureRequestCommentAdded: '64cbbdd5deae7aa5dce6216e',
+  newCompanyNotify: '63cd25438de4d5de0f825893',
+  approvedCompany: '63cd47868de4d5de0f825896',
+  activateAccount: '63cd4bb28de4d5de0f825897',
+  deActivateAccount: '63cd4bca8de4d5de0f825898',
+  emailUpdated: '63e93a5ad4fad30fc4fe5555',
+  emailVerificationCode: '63ea8e000ca9959b16a1f797',
+  verifyEmail: '64136da941397ff6ad95b894',
+  changeLogEmail: '645d4018af3bdd2f5d622c8b'
+}
