@@ -655,82 +655,6 @@ export const addInvoiceAsDraft = async (req, res) => {
 }
 
 export const updateStripInvoiceStatus = async (req, res) => {
-  // const response = {
-  //   id: 'cs_test_a1w6MKClB0pHCVZVlRnv7Zbq8iv8CRMY04DIBndilZ1VKHWw8AypknjFuB',
-  //   object: 'checkout.session',
-  //   after_expiration: null,
-  //   allow_promotion_codes: false,
-  //   amount_subtotal: 12000,
-  //   amount_total: 12000,
-  //   automatic_tax: { enabled: false, status: null },
-  //   billing_address_collection: 'auto',
-  //   cancel_url: 'https://stripe.com',
-  //   client_reference_id: null,
-  //   consent: null,
-  //   consent_collection: null,
-  //   created: 1675190660,
-  //   currency: 'usd',
-  //   custom_text: { shipping_address: null, submit: null },
-  //   customer: null,
-  //   customer_creation: 'if_required',
-  //   customer_details: {
-  //     address: {
-  //       city: 'New City',
-  //       country: 'US',
-  //       line1: 'fdfv d fdvdfv',
-  //       line2: 'jnjkadsnckjs njskdnckj',
-  //       postal_code: '36400',
-  //       state: 'AL'
-  //     },
-  //     email: 'btdeveloper7@gmail.com',
-  //     name: 'Test User',
-  //     phone: null,
-  //     tax_exempt: 'none',
-  //     tax_ids: []
-  //   },
-  //   customer_email: null,
-  //   expires_at: 1675277060,
-  //   invoice: null,
-  //   invoice_creation: {
-  //     enabled: false,
-  //     invoice_data: {
-  //       account_tax_ids: null,
-  //       custom_fields: null,
-  //       description: null,
-  //       footer: null,
-  //       metadata: {},
-  //       rendering_options: null
-  //     }
-  //   },
-  //   livemode: false,
-  //   locale: 'auto',
-  //   metadata: {
-  //     invoice: '20230201-0002',
-  //     product: '63c9904972cfe7b49a8de1b3',
-  //     customer: '639a276b8bf08bf33c081a6f'
-  //   },
-  //   mode: 'payment',
-  //   payment_intent: 'pi_3MWOorSC5GAVp5ZC11xqtPd9',
-  //   payment_link: 'plink_1MWOm7SC5GAVp5ZC8EWUUJz9',
-  //   payment_method_collection: 'always',
-  //   payment_method_options: {},
-  //   payment_method_types: ['card'],
-  //   payment_status: 'paid',
-  //   phone_number_collection: { enabled: false },
-  //   recovered_from: null,
-  //   setup_intent: null,
-  //   shipping_address_collection: null,
-  //   shipping_cost: null,
-  //   shipping_details: null,
-  //   shipping_options: [],
-  //   status: 'complete',
-  //   submit_type: 'auto',
-  //   subscription: null,
-  //   success_url: 'https://stripe.com',
-  //   total_details: { amount_discount: 0, amount_shipping: 0, amount_tax: 0 },
-  //   url: null
-  // }
-  // await updateStripePaymentHistory(response)
   return { status: 'Done' }
 }
 export const handleInvoiceStatus = async (req, res) => {
@@ -738,11 +662,7 @@ export const handleInvoiceStatus = async (req, res) => {
     const sig = req.headers['stripe-signature']
     const stripe = new Stripe(process.env.STRIPE_API_KEY)
 
-    const event = stripe.webhooks.constructEvent(
-      req.body,
-      sig,
-      'whsec_c1fd7484cc92515a90e9570b9b983d0e45ef33f26fb84be7cc51598c16168f17'
-    )
+    const event = stripe.webhooks.constructEvent(req.body, sig, '')
     switch (event.type) {
       case 'checkout.session.completed': {
         const paymentIntent = event.data.object
